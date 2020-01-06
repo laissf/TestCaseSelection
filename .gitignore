@@ -1,0 +1,7 @@
+venv/
+.idea/
+local.py
+productions.py
+*.sqlite3
+migrations/
+__pycache__/
