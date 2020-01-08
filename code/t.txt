@@ -1,0 +1,340 @@
+MCA-1067939: TC - TMO Data Roaming interactions with Wi-Fi
+MCA-1939481: TC - Check BT headset audio quality during a MT WFC
+MCA-665503: TC - [AOSP VVM] Interaction of VVM with call
+MCA-1834299: TC - Verify WFC waiting during active + hold call
+MCA-1840: TC - Ensure that browser is working when L2TP PSK VPN is connected via live cellular network.
+MCA-1939480: TC - Check BT headset audio quality during a MO WFC
+MCA-1917307: TC - Check confirmation before disable face unlock
+MCA-957701: TC - Android Wear: Interaction with MHS
+MCA-371133: TC - Modify Call Settings and power cycle the phone, settings should be retained after power up
+MCA-1191239: TC - Name ID - interactions
+MCA-1191241: TC - Device Unlock - interactions
+MCA-1917310: TC - Check add new participants in a closed group chat
+MCA-717699: TC - Calls Timers - Basic Verification
+MCA-717695: TC - Last Voice Call Timer - Basic Verification
+MCA-371327: TC - Receiving MMS when Auto-retrieve is OFF
+MCA-717701: TC - Calls Timers - Resetting timers for calls
+MCA-717705: TC - Lifetime Calls Timers not resetable
+MCA-371196: TC - Missed call notification
+MCA-324: TC - LogMeIn - Rescue + Mobile for Android - Incoming call
+MCA-371338: TC - Send a message by Direct message widget
+MCA-903199: TC - Verify the restore from another device after an FDR
+MCA-328876: TC - To Check Inactivity Timeout for Mobile Hotspot
+MCA-1917313: TC - Check review additional apps and interactions
+MCA-1053288: TC - Name ID app incoming call
+MCA-1008: TC - Send/receive an MMS with Auto-retrieve On/Off
+MCA-1053289: TC - Name ID app outgoing call
+MCA-1191253: TC - T-Mobile App - interactions
+MCA-1068805: TC - Name ID app different incoming calls
+MCA-1191255: TC - T-Mobile TV  App - interactions
+MCA-1917323: TC - Check RTT interactions with call waiting
+MCA-1015: TC - Messaging: Auto-Complete list, Maximum Recipients and Delivery Reports
+MCA-1990700: TC - Automatic and Manual network selection
+MCA-1053287: TC - TMO Data Roaming Pop Up interactions and interruptions
+MCA-1619357: TC - Verify PAI list in OOB flow and interactions with connectivity interactions
+MCA-880528: TC - For LTE and WiFi co-existing scenario, check VoLTE calls will handover to WiFi ePDG (Video Call)
+MCA-847: TC - Calling: Check continuous multiple MO/MT call.
+MCA-1844853: TC - [RTT] - Interaction during RTT WFC
+MCA-217126: TC - Conference Calls: Managing conference
+MCA-28287: TC - AOSP VoLTE: VoLTE call ongoing, then make MO/answer MT call, check swap.
+MCA-1270448: TC - Video conference call over WiFi
+MCA-829318: TC - Direct Boot Mode - Incoming Video Calls (native)
+MCA-1620672: TC - [Real Time Text Call] --Verify user can enable the RTT
+MCA-1306: TC - Upgrade / Downgrade :Verify that the user shall be able to downgrade the Video Call (VT) to VoLTE voice call by making the both MO/MT camera OFF, further try to upgrade to Video Call during the same VoLTE voice call session
+MCA-1834298: TC - Verify VoLTE Call waiting during active + hold call
+MCA-371347: TC - Answer video call as voice call
+MCA-371087: TC - Hot swap and replace SIM cards 
+MCA-110552: TC - IPV6: For mobile network IPV6 and IPV4 access, check phone should have matched IP, and can browse IPv6 and IPV4 web sites.
+MCA-111561: TC - IPV6: For mobile network IPV6 and IPV4 access, check apps access internet via mobile or WiFi(WiFi on and off).
+MCA-1620674: TC - [RTT] - Interaction during RTT VoLTE Call
+MCA-440935: TC - Voice Mail (VVM) - interactions
+MCA-847852: TC - [RCS] Chat messaging when device has low memory ( RAM and Storage)
+MCA-847843: TC - [RCS] RCS Chat Messaging with AOD
+MCA-1834293: TC - Check MMS can be sent/received even with data disabled
+MCA-1834294: TC - Check MMS can be sent/received even with data disabled and WFC ON
+MCA-1834295: TC - In WFC verify DTMF are identified correctly
+MCA-1834296: TC - Make a call and keep it for 5 minutes by checking audio quality
+MCA-1191202: TC - Restricted calls via non-VoLTE
+MCA-665501: TC - [AOSP VVM] Basic functionality check of VVM
+MCA-371293: TC - Change Wallpaper to a preloaded one, a live one, an image from Photos and sdcard. And change wallpaper direct from Photos.
+MCA-1841: TC -  PPTP VPN with Wi-Fi and Mobile Network
+MCA-371195: TC - Get incoming call notification(hand-up notification) in Home screen, perform "answer" and "dimiss"
+MCA-496859: TC - Unblock the number from Blocked Numbers list, Call History
+MCA-371123: TC - MO/MT Call with picture ID
+MCA-1740: TC - WiFi: Mobile Hotspot with Interactions
+MCA-496858: TC - Call Blocking from Call History, Call Details
+MCA-648487: TC - Basic Functionality check of reboot in Press Power button
+MCA-888: TC - Settings: Restore system to default via factory data reset
+MCA-924: TC - L2TP/IPSec RSA  VPN: Always on, Wi-Fi/Mobile Network and  VPN long time connection
+MCA-1191197: TC - In VoLTE Call  verify DTMF are identified correctly
+MCA-1834301: TC - Make a VoLTE call and keep it for 10 minutes by checking audio quality
+MCA-1834304: TC - Make a Video ePDG (Wifi Video Call) and keep it for 5 minutes by checking audio and video quality
+MCA-1834303: TC - Make a Video call and keep it for 5 minutes by checking audio and video quality
+MCA-226760: TC - VoWiFi: Check 10 minutes of a single voice and video call over WiFi(2.4GHz/5GHz).
+MCA-1834302: TC - Make a WFC and keep it for 5 minutes by checking audio quality
+MCA-45953: TC - Network Camping: Airplane mode on/off and when in 2G/3G/4G
+MCA-1414689: TC - Verify USSD code when VoLTE is enabled
+MCA-957: TC - USB Tethering
+MCA-1620675: TC - [Real Time Text Call] - Using RTT in different network environments(2G/3G/4G)
+MCA-1331: TC - Calling : Verify that the device shall be able to receive  the MT video call , Initiate Video call from Recent calls
+MCA-226739: TC - VoWiFi: Check Handover voice call call between LTE and WiFi in case of WFC On.
+MCA-1003: TC - Receiving and Sending MMS when phone is in call with 2G (GSM/CDMA1x) Network
+MCA-648496: TC - Allow/disallow apps on Data saver mode
+MCA-369927: TC - Switch network camping among 2G, 3G and 4G mode
+MCA-371134: TC - Ignore call - while the phone is locked with pattern lock - Quick response with a new message
+MCA-371129: TC - During call open Dial Pad, digit some numbers and press back key. Should return to call screen
+MCA-371136: TC - Start a call with phone locked by long pressing BT headset call button, end the call with a single press.
+MCA-371128: TC - Verify volume change during call on earpiece and speaker
+MCA-2033170: TC - MO/MT VoWifi call with another OEM devices
+MCA-1002: TC - Receiving and Sending MMS when phone is in call with 3G Network
+MCA-1156194: TC - Check for Light/Dark theme changes with different wallpapers set
+MCA-1191200: TC - Use Call Forwarding with VoLTE
+MCA-1734: TC - LBS: Check location via GPS Using Google Maps, its Navigation, and Carrier Navigator Applications (if phone has carrier special navigator) with Chrome or Browser location interaction; and check Location request list should include apps which request
+MCA-847833: TC - [RCS] Chat in different network conditions - WiFi, Data
+MCA-847831: TC - [RCS] Basic functionality check
+MCA-847865: TC - [RCS] Inline Reply (Locked/Unlocked screen)
+MCA-847850: TC - [RCS] Sharing Contacts/locations
+MCA-847854: TC - [RCS] Attach many audio, video, image files
+MCA-1067941: TC - TMO Data Roaming interactions with Device owner
+MCA-1053235: TC - Roaming icon should not be shown on status bar during interactions
+MCA-1068806: TC - Name ID app and roaming
+MCA-1272300: TC - Roaming icon should not be shown on status bar when using a secondary user
+MCA-68015: TC - Voice Roaming
+MCA-1727: TC - Messaging: Testing of animated Gif support in MMS
+MCA-853: TC - Preloaded APN should not be edited and deleted.
+MCA-118198: TC - Verify if voicemail number is persistent after power cycle
+MCA-371329: TC - Sending SMS to Email address (US Only)
+MCA-371122: TC - In Call send DTMF tones and verify they are identified correctly
+MCA-1188391: TC - Facebook - interactions
+MCA-1917304: TC - Verify invalid MAC address on allowed device manager
+MCA-1881096: TC - TTY: Check TTY modes and functionality - TMO/MPCS
+MCA-1910498: TC - MO/MT MMS with Multiple Recipients and send different attachments
+MCA-46288: TC - Insert SIM card which has been enabled call forward, then check status bar
+MCA-322: TC - LogMeIn - Rescue + Mobile for Android - Interruptions while session in TC
+MCA-1617408: TC - LogMeIn - Rescue + Mobile for Android - Chromecast interaction with TC session
+MCA-371323: TC - Send MMS to Multiple Recipients - Email address and Phone numbers
+MCA-717698: TC - Last Voice Call Timer - Resetting timer while on call
+MCA-717696: TC - Last Voice Call Timer - Extended Verification
+MCA-717697: TC - Last Voice Call Timer - Corner Cases
+MCA-46: TC - Phone: CallerID with name containing non-ASCII characters
+MCA-1837: TC - Tcoil settings
+MCA-371109: TC - BT Coexistence - Connect BT headset when max devices are connected to MHS
+MCA-717700: TC - Calls Timers - Extended Verification
+MCA-1071: TC - Contacts: Interactions with contact edit options
+MCA-1137: TC - Check MO/MT VoLTE video and audio calls while phone(s) is/are connected to WiFi Mobile hotspot network.
+MCA-1917325: TC - Check RTT incoming call while RTT call is ongoing
+MCA-1916186: TC - Verify low battery Audio Alert during MO/MT Call
+MCA-1983792: TC - [Unified TMO/Sprint] - Check messenger app on device without SIM on OOBE
+MCA-1910704: TC - Verify option end VT and answer incoming voice call
+MCA-371112: TC - MHS settings
+MCA-665507: TC - [AOSP VVM] VVM from unknown contact
+MCA-1136: TC - Check MO/MT VoLTE video and audio calls while phone(s) is/are connected to WiFi IPv6 network.
+MCA-1917303: TC - Manage allowed devices on MHS
+MCA-2001605: TC - WiFi Calling preference behavior with APM ON/OFF
+MCA-1068896: TC - Check MO/MT Voice/Video calls and browsing/streaming while Device Settings has different ON/OFF combination for VoLTE, Video(VT) and VoWiFi.
+MCA-226715: TC - VoWiFi: [WiFi only, No Cellular] Check Turn On Wi-Fi Calling Setting via Call Launch – No Address Entered.
+MCA-1053290: TC - Name ID app incoming message with multiuser
+MCA-1917324: TC - Check VT incoming call while RTT call is ongoing
+MCA-1917326: TC - Verify RTT call and call forwarding interaction
+MCA-1917311: TC - Check client limit for hotspot
+MCA-665517: TC - [AOSP VVM] Volume level changes for VVM
+MCA-1917314: TC - Change alias and check RCS conversation
+MCA-665506: TC - [AOSP VVM] VVM from saved contact
+MCA-1916188: TC - CSFB during USSD triggered with IMS Registered
+MCA-665510: TC - [AOSP VVM] VVM functionality check with Talkback enabled
+MCA-665521: TC - [AOSP VVM] Playing VVM with music routing in background
+MCA-665519: TC - [AOSP VVM] VVM interaction with Moto Voice and Moto actions
+MCA-1934700: TC - [Unified TMO/Sprint] - Check activated device as TMO on OOBE change messenger to GMS
+MCA-1897261: TC - WFC Calling preference behaviors
+MCA-665522: TC - [AOSP VVM] Multi-window interaction with VVM
+MCA-1934697: TC -  [Unified TMO/Sprint] - Check device with Sprint SIM associated should work with TMO SIM
+MCA-1934696: TC - [Unified TMO/Sprint] - Check PAI list for specific carrier apps
+MCA-1917309: TC - MO/MT 10mb media file via RCS
+MCA-1934695: TC -  [Unified TMO/Sprint] - Check UI on Network mobile for TMO
+MCA-1917312: TC - Check SMS/MMS interaction with Iphone
+MCA-1127: TC - Check LTE Video call handover to WiFi ePDG; After end current ePDG call, check another VoLTE ePDG video call.
+MCA-104451: TC - Verify emergency call only status on quick settings
+MCA-1321: TC - Stability : Long time video call
+MCA-1009: TC - Receive and Send a Concatenated SMS and Convertion to MMS.
+MCA-553277: TC - Verify numbers similars to a emergency number and non-emergency call on "Emergency dial pad"
+MCA-1170646: TC - While in conference call receive a restricted call
+MCA-998: TC - Localization: Check the phone number formatting for various countries/regions.
+MCA-460547: TC - VT call when it in a WIFI voice call
+MCA-226761: TC - VoWiFi: Check 15 minutes of a single voice call over WiFi (2.4Ghz) with Bluetooth headset and other Bluetooth accessories.
+MCA-226733: TC - VoWiFi: [WiFi Yes, Cellular Yes] Change SIM card and check VoLTE and VoWiFi settings and MO/MT call.
+MCA-1312: TC - Active video call :Verify that the audio and video of a video call session shall be synchronized
+MCA-1838800: TC - While mobile data off make MO and MT VoLTE call
+MCA-1272259: TC - Video conference and mod interactions
+MCA-1310: TC - Active video call /Accessories :Verify that  the Video calling application shall support soft key to toggle Bluetooth audio routing similar to 1X voice call
+MCA-1272135: TC - Video conference call when font and display size changed
+MCA-1809501: TC - Check beep sound when upgrade for Video call request is received
+MCA-1452688: TC - Verify DUT registers on LTE when VoWifi enabled and Wifi has no internet 
+MCA-111557: TC - IPV6: For mobile network IPV6 and IPV4 access, check L2TP/IPSec RSA/PSK VPN.
+MCA-1322: TC - Stability : Switch between voice and video call
+MCA-477950: TC - Reject the VoLTE Voice call Upgrade request and hold & answer, reject another incoming VoLTE call
+MCA-1272142: TC - Handover from WiFi-LTE-WiFi on ongoing Video Conference
+MCA-395511: TC - Verify VoLTE Calling settings and IMS registration after BOTA
+MCA-859: TC - Check phone should support MO and MT VoLTE audio call, even user disable mobile data and with airplane cycle or power cycle interactions.
+MCA-328762: TC - Multi HD call on lock screen
+MCA-779: TC - Video call while in navigation mode.
+MCA-1272134: TC - Video conference call when device in multiwindow
+MCA-95126: TC - [35954] Verify Data Network Icon for GSM/UMTS/LTE
+MCA-1309: TC - Active video call /Accessories :Verify that when an external wired headset is connected  the audio component of a Video Call/Share shall default to the external headset.
+MCA-244142: TC - VoWiFi: Handover a video call and an on-hold voice call between LTE and WiFi
+MCA-111377: TC - IPV6: For mobile network IPV6 and IPV4 access, check Video call (Skype, Whatsapp and Duo).
+MCA-1329: TC - IOT: Receive video call from other vendor device and interact in-call UI.
+MCA-763: TC - Video call while in battery saver mode.
+MCA-1170651: TC - VT calls with permission interactions
+MCA-1272139: TC - Video conference call when receiving 2 restricted calls
+MCA-371351: TC - Play busy tone
+MCA-1323126: TC - TC - Verify Hotspot while charging DUT with WC (Wireless Charger).
+MCA-111387: TC - IPV6: For mobile network IPV6 and IPV4 access, check USB/WiFi tethering.
+MCA-401724: TC - VoLTE Contact : Video icon check with interactions
+MCA-1307: TC - Call forward: Make video call to DUT which setup call forward to other VoLTE device
+MCA-226714: TC - Enhanced N-Way Call: Receive call while phone is in Conference Calls and merge the incoming call to Conference Call 
+MCA-1750740: TC - Make VoLTE voice call via Google Assistant with different user scenario.
+MCA-1314: TC - Multitasking : Launch Camera to record video while video call
+MCA-1135: TC - Check MO/MT VoLTE video and audio calls while phone Mobile hotspot is working.
+MCA-775: TC - VoLTE Calls while charging/discharging.
+MCA-401719: TC - VoLTE - IMS registration check
+MCA-28293: TC - AOSP VoLTE: During VoLTE conference call, check make new MO/MT call, then try swap.
+MCA-1620676: TC - [Real Time Text Call] - RTT with interruptions.
+MCA-1272141: TC - Interactions while device is connected to 2 video conference calls
+MCA-28291: TC - AOSP VoLTE: VoLTE conference call, then check hold on.
+MCA-371346: TC - Check conference call can be made among VoLTE phone (A) and non-VoLTE phones (B. C)
+MCA-111384: TC - IPV6: For mobile network IPV6 and IPV4 access, check MO/MT MMS.
+MCA-1620673: TC - [Real Time Text Call] --Verify functionality of touch to keypad in RTT calling screen menu
+MCA-1297: TC - Multicall/CALL WAITING : Accept/Reject incoming video call while there is video call ongoing
+MCA-767: TC - Video call while low storage mode.
+MCA-1033733: TC - Security - Keystore key integrity after BOTA update
+MCA-847870: TC - [RCS] Chat messaging with different font and Display sizes
+MCA-847851: TC - [RCS] Chat messaging in low battery mode
+MCA-847832: TC - [RCS] Messaging non-rcs users
+MCA-847868: TC - [RCS] Chat messaging in Demo mode
+MCA-717665: TC - AOSP_ViLTE: Switch Camera during VT Call
+MCA-1156195: TC - [A/B BOTA Update] [Streaming] Switching networks during package download and installation
+MCA-847840: TC - [RCS] RCS chat messaging with different apps active in background
+MCA-847866: TC - [RCS] Messaging for AFW and BYOD users
+MCA-847842: TC - [RCS] RCS Chat Messaging in Multiwindow
+MCA-847835: TC - [RCS] Chat verification in Airplane mode OR disabled network
+MCA-847841: TC - [RCS] RCS Chat Messaging interactions with Moto-Actions
+MCA-847859: TC - [RCS] Chat messaging with BT HID devices connected
+MCA-717669: TC - AOSP_ViLTE: Multiple Interactions during VT Call
+MCA-717662: TC - AOSP_ViLTE: Data usage for a VT Call
+MCA-717663: TC - AOSP_ViLTE: Multiple interrupts during VT call
+MCA-717661: TC - AOSP_ViLTE: VT Call when Data limit is set
+MCA-847837: TC - [RCS] Chat messaging when connected to/as Hotspot
+MCA-847834: TC - [RCS] Data Usage
+MCA-717685: TC - AOSP_ViLTE: While on Duo Call receive VT Call
+MCA-717688: TC - AOSP_ViLTE: While on whatsapp Voice/Video call receive VT Call
+MCA-717671: TC - AOSP_ViLTE: VT Call interaction with Carkit & Cardock Mod
+MCA-847845: TC - [RCS] RCS Chat Messaging with AOV
+MCA-717668: TC - AOSP_ViLTE: Hold ongoing VT Call
+MCA-847858: TC - [RCS] Chat messaging with BT and Wired Headset connected
+MCA-1619126: TC - Send and receive mms while phone has no signal and when WiFi calling is enabled
+MCA-1983969: TC - Check device with TMO SIM associated should work with Sprint SIM
+MCA-1984000: TC - [Unified TMO/Sprint] - Verify RCS with insert T-Mobile and Sprint SIMs
+MCA-847869: TC - RCS: Chat messaging with Doze Mode
+MCA-124156: TC - Contacts multi picker feature - delete and share contact
+MCA-1067940: TC - TMO Data Roaming interactions with Android for Work
+MCA-1834300: TC - Use Call Forwarding with WFC
+MCA-28199: TC - AOSP VoLTE: Make VoLTE call then check the VoLTE call quality, HD icon, LTE network, SMS/MMS, WiFi, browser and Gmail
+MCA-1881068: TC - Check audio quality when headset is connected while in call
+MCA-217128: TC - Enhanced N-Way Call: Get an incoming call from device(which is in conference call)when phone is in conference call, not able to merge two conference calls
+MCA-839: TC - MO/MT Call - BT Headset/Speaker - Volume Controls - Call Waiting
+MCA-1642: TC - Initiate call from device then immediately hang up.  Play with timings.
+MCA-496862: TC - Call Blocking functionality after Factory Data Reset (FDR)
+MCA-986691: TC - Check applications on Home/App tray
+MCA-1718: TC - Verify Call waiting during active + hold call
+MCA-1334439: TC - VoLTE voice call to the Non-VoLTE mobile that has voicemail service enabled.
+MCA-961: TC - Power on phone in Airplane Mode
+MCA-496863: TC - Call Blocking functionality from a Blocked number that is also stored in DUT Contact list and Starred list
+MCA-648495: TC - Enable/disable Data saver
+MCA-648497: TC - Check VoLTE calls with Data Saver enabled
+MCA-371321: TC - Sending / Receiving messages while in Airplane mode
+MCA-829317: TC - Direct Boot Mode - Incoming Voice Calls (WiFi / VoWiFi)
+MCA-118288: TC - Wi-fi handoff to data connection while audio streaming is playing
+MCA-1131276: TC - Receive Contact via Whatsapp
+MCA-1441: TC - MEID pop up screen is not dismissed with incoming call/sms/mms
+MCA-97795: TC - Reset network settings
+MCA-509473: TC - Check Wifi Data Usage
+MCA-371278: TC - BT HFP: During Calling, Toggle between Speaker/Handset/BT Headset/3.5mm headset, for any audio route path scenario
+MCA-1194: TC - WiFi: Share Mobile network data functionality by WiFi Mobile hotspot method, and check at least 3 WiFi clients to browse, download or any data tasks, with interactions of Airplane mode, BT operations, WiFi signal, MT Call messaging, Or
+MCA-848: TC - Initiating a Call from Different Areas on the Phones UI and Auto Dial Pad.
+MCA-829320: TC - Direct Boot Mode - Calls Advanced Interactions
+MCA-1662510: TC - Check if Hotspot turns off automatically after timeout
+MCA-496860: TC - Multi-User: Call Blocking in Primary, Secondary, Guest Users
+MCA-327688: TC - Clear data for Moto App Launcher and verify Home screen
+MCA-1062: TC - Check dialer, contacts and SMS/MMS app when there are 2000 contacts on device
+MCA-890904: TC - Verify the calling screen UI after separate the conference call using a BT headset
+MCA-1617387: TC - LogMeIn - Rescue + Mobile for Android - Multiuser interactions with TC
+MCA-99389: TC - Reset networking setting (Cellular Data)
+MCA-883: TC - Initial Setup: Follow initial setup, go back to previous screens and then continue to finish the setup, try change orientation and press home key. Before the setup finished, power cycle the device
+MCA-1331475: TC - VoWiFi Calling even after signal is lost
+MCA-717673: TC - AOSP_ViLTE: VT Call while Tethering is enabled on the DUT
+MCA-844: TC - Conference call - 7 lines
+MCA-2086532: TC - Check thumbnails when receiving RCS for different media types
+MCA-2086533: TC - Check media can resume upload after fail to send via RCS
+MCA-1619127: TC - Send and receive mms while phone in roaming and when WiFi calling is enabled
+MCA-554972: TC - Verify call to invalid numbers using Wifi Calling
+MCA-903200: TC - Verify that device will continue using the same launcher as that of the Base build after OTA upgrade
+MCA-226753: TC - VoWiFi: Interaction between ongoing voice/video call over WiFi and USB/BT accessories.
+MCA-480728: TC - Make/Receive Voice/video call from blocked number (VoLTE, VoWiFi)
+MCA-371092: TC - Call forward All option - non-VoLTE
+MCA-883038: TC - Verify Message History after Power Cycle/Airplane Mode with SMS/MMS/Email/IM interactions on top of Emergency Alert message dialog
+MCA-847846: TC - [RCS] Attaching files in SD card, USB, Internal storage etc
+MCA-847839: TC - [RCS] Interactions with RCS chat messaging
+MCA-847862: TC - [RCS] Chat messaging and Multiusers
+MCA-847863: TC - [RCS] Chat messaging via contacts/call history
+MCA-847838: TC - [RCS] RCS chat messaging from blocked number
+MCA-847871: TC - [RCS] Chat messaging in Direct Boot mode
+MCA-665518: TC - [AOSP VVM] VVM interaction while device is in roaming
+MCA-323: TC - LogMeIn - Rescue + Mobile for Android - Switch between connection types. Mobile Data->Wifi
+MCA-1174822: TC - Verify call goes via VoLTE when launched on AoD
+MCA-665520: TC - [AOSP VVM] VVM contenent test with different fontsize and display size
+MCA-554842: TC - Notification Interactions with Video Call
+MCA-523: TC - MO calls VoLTE to LandLine
+MCA-1303: TC - Multicall/CALL WAITING : Reject incoming video call while there is active volte voice call.
+MCA-1292: TC - CALL SETUP : Verify when the device is in locked state If “No action” for the incoming video call, call shall be listed as missed call in the recent call history
+MCA-28290: TC - AOSP VoLTE: Phone is in one VoLTE conference call as guest, check new MO/MT call, then swap.
+MCA-1291: TC - Call Setup: Verify call answer options on locked state: Call reject, accept as Voice Call and accept as Video Call
+MCA-1279: TC - Active video call :Verify all the options available on the screen during active video call.video call intiated from Contact list & Favorite contact list
+MCA-1139: TC - Check phone can get MT VoLTE video and audio calls while hangouts is ongoing, and phone can get MT hangouts while VoLTE video or audio calls is ongoing.
+MCA-760: TC - Interact with wired headset while video call is ongoing.
+MCA-781: TC - Make VoLTE call and non-VoLTE call one by one multiple times to check device stability.
+MCA-780: TC - Video call while number does NOT exist in Address book.
+MCA-776: TC - Video call with talk to me enabled in driving mode.
+MCA-504212: TC - VT Camera direction should be remembered per call
+MCA-28289: TC - AOSP VoLTE: Phone is in one VoLTE conference call as guest, check hold on the call.
+MCA-772: TC - Receive video call while playing YouTube video via Chromecast.
+MCA-717678: TC - AOSP_ViLTE: On Active VoLTE voice call with speaker on and display off, receive MT VT call upgrade request
+MCA-847867: TC - [RCS] Chat Messaging with Talkback enabled
+MCA-847847: TC - [RCS] Attachment - Recording Audio in service mode with music in background
+MCA-847855: TC - [RCS] Send and receive corrupted files
+MCA-847848: TC - [RCS] Chat messaging using 3rd party VKB (Virtual Keyboard)
+MCA-847860: TC - [RCS] Chat messaging with Chromecast
+MCA-847864: TC - [RCS] Sending/Receiving Encrypted files
+MCA-717689: TC - AOSP_ViLTE: VT Call while DUT charging through Wireless Charger
+MCA-847849: TC - [RCS] Chat Messaging with 3rd party themes/launchers/Camera
+MCA-847836: TC - [RCS] Roaming Condition
+MCA-717664: TC - AOSP_ViLTE: Moto Action Interaction during VT Call
+MCA-847857: TC - [RCS] Chat messaging with various types of chargers connected
+MCA-496856: TC - Call, SMS, MMS, Voicemails from Blocked numbers containing various Country code formats (prefix +1, 001, 1) and other national / international number formats with various number of digits
+MCA-371130: TC - During a call check status bar, open notification curtain and end ongoing call
+MCA-371125: TC - Ignore a MT Call
+MCA-482700: TC - Verify Return to call option on lockscreen
+MCA-977: TC - Fastboot - get barcode by scanner
+MCA-1005: TC - Emergency broadcasts: Emergency broadcasts settings indexing for search in Settings
+MCA-1112134: TC - Verify that the number of accounts is correctly displayed on different screens
+MCA-847853: TC - [RCS] Max Limit - Group, File size, Characters
+MCA-1327: TC - Out of Coverage Area: Verify that during Active Video between MO&MT, the MO/MT moves out of LTE coverage into non-LTE coverage or NO DATA coverage, the device client shall end the VT call
+MCA-1324: TC - Multitasking : MO shall be able to launch the gallery & view images during Video call
+MCA-1283: TC - Active video call :Verify that the user shall be able to change the  position of the video thumbnail to any of the corners of the screen.
+MCA-1910566: TC - VoWiFi: [WiFi=Yes, Cellular LTE=No 1X/CS=Yes Roaming] Check MO/MT Voice/Video calls and network priority over WFC
+MCA-226717: TC - VoWiFi: [WiFi only, No Cellular] Check MT Voice call via WiFi while WiFi Calling is set to ON or OFF.
+MCA-226748: TC - VoWiFi: Interaction between ongoing voice/video call over WiFi and wireless display.
+MCA-226723: TC - VoWiFi: [WiFi only, No Cellular] Check Video call switch between two-way and one-way, downgrade video call to voice call.
+MCA-226745: TC - VoWiFi: Check Voice and video call handover between different WiFi APs with same SSID.
+MCA-226746: TC - VoWiFi: Check Voice and video call over WiFi network which is MobileHotSpot of another LTE phone.
+MCA-226756: TC - VoWiFi: Interactions while voice/video call over Wi-fi
+MCA-226741: TC - VoWiFi: Check Call waiting, call hold, call mute, call resume and call swapping while voice call over WiFi in progress.

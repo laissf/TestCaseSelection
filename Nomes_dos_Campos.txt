@@ -1,0 +1,362 @@
+https://dalek.mot.com/rest/testdetails/1.0/dalekTestDetailsRestAPI/downlaodExcelSheet?testPlanIssueKey=MCA-2104395&excelType=testCaseExecution
+
+ID: customfield_13100 	|	 Nome: RAM Size
+ID: resolution 	|	 Nome: Resolution
+ID: customfield_11962 	|	 Nome: Test Severity
+ID: customfield_10510 	|	 Nome: CAT5-3-1
+ID: customfield_11961 	|	 Nome: Test Priority
+ID: customfield_10500 	|	 Nome: Test Environment
+ID: customfield_11953 	|	 Nome: Test Group
+ID: customfield_10501 	|	 Nome: FP
+ID: customfield_11952 	|	 Nome: PRD Section No.
+ID: customfield_11955 	|	 Nome: SIM/USIM
+ID: customfield_10502 	|	 Nome: XLine
+ID: customfield_10503 	|	 Nome: FT Deleted
+ID: customfield_11954 	|	 Nome: Test Type
+ID: customfield_10504 	|	 Nome: FT Group
+ID: customfield_11957 	|	 Nome: PCOM Script ID
+ID: customfield_10505 	|	 Nome: FT LA Execution
+ID: customfield_11956 	|	 Nome: Test Platform
+ID: customfield_10506 	|	 Nome: Optimized Plan
+ID: customfield_11959 	|	 Nome: Test Case Status
+ID: customfield_10507 	|	 Nome: Feature Id (this field can be deleted?)
+ID: customfield_11958 	|	 Nome: Sub Section ID
+ID: customfield_10508 	|	 Nome: Perfecto
+ID: customfield_10509 	|	 Nome: Category
+ID: lastViewed 	|	 Nome: Last Viewed
+ID: customfield_12000 	|	 Nome: Secondary HW
+ID: customfield_11951 	|	 Nome: PRD Name
+ID: labels 	|	 Nome: Labels
+ID: customfield_11950 	|	 Nome: PRD No.
+ID: customfield_11700 	|	 Nome: Evening Operator
+ID: customfield_11942 	|	 Nome: Execute Outside Carrier Lab
+ID: customfield_11941 	|	 Nome: MVNO Phone – Voice Only
+ID: customfield_11944 	|	 Nome: DVM
+ID: customfield_11702 	|	 Nome: Donnot_Operator_URL
+ID: customfield_11943 	|	 Nome: DOM
+ID: customfield_11701 	|	 Nome: Donot_Weekend_URL
+ID: aggregatetimeoriginalestimate 	|	 Nome: Σ Original Estimate
+ID: customfield_11704 	|	 Nome: Donot_user_PrimaryURL
+ID: customfield_11946 	|	 Nome: NO-AM-DV
+ID: customfield_11945 	|	 Nome: NO-AM-DO
+ID: customfield_11703 	|	 Nome: Secondary Operator
+ID: customfield_11948 	|	 Nome: Carrier Test Requirement Number
+ID: customfield_11706 	|	 Nome: Primary SME
+ID: customfield_11947 	|	 Nome: Lab Availability
+ID: customfield_11705 	|	 Nome: Secondary SME
+ID: customfield_11708 	|	 Nome: Primary Operator
+ID: customfield_11949 	|	 Nome: Carrier Device Requirement Number
+ID: customfield_11707 	|	 Nome: Weekend Operator
+ID: issuelinks 	|	 Nome: Linked Issues
+ID: assignee 	|	 Nome: Assignee
+ID: components 	|	 Nome: Component/s
+ID: customfield_13200 	|	 Nome: Remote Issue Key
+ID: customfield_11940 	|	 Nome: FWLL
+ID: customfield_11810 	|	 Nome: Epic Status
+ID: customfield_11931 	|	 Nome: MVNO Connectivity Device – Data Only
+ID: customfield_10600 	|	 Nome: Blocked Reason
+ID: customfield_11930 	|	 Nome: MVNO Phone (Feat & Smartphone) – Voice + Data
+ID: customfield_11812 	|	 Nome: Epic Color
+ID: customfield_10601 	|	 Nome: KPI Tolerance Type
+ID: customfield_11933 	|	 Nome: Sub-Category
+ID: customfield_11811 	|	 Nome: Epic Name
+ID: customfield_10602 	|	 Nome: KPI Tolerance
+ID: customfield_11932 	|	 Nome: MVNO Connectivity Device – Voice + Data
+ID: customfield_11814 	|	 Nome: Flagged
+ID: customfield_11935 	|	 Nome: Modified KPI Cases
+ID: customfield_10603 	|	 Nome: Uploader Session ID
+ID: customfield_11813 	|	 Nome: Rank
+ID: customfield_10604 	|	 Nome: Select CR Test Case Ids
+ID: customfield_11816 	|	 Nome: Story Points
+ID: customfield_11815 	|	 Nome: Epic/Theme
+ID: customfield_11936 	|	 Nome: Modify KPI Target and Tolerance Values
+ID: customfield_11939 	|	 Nome: Protect the Network
+ID: customfield_11817 	|	 Nome: Business Value
+ID: customfield_11938 	|	 Nome: Flex
+ID: subtasks 	|	 Nome: Sub-Tasks
+ID: reporter 	|	 Nome: Reporter
+ID: customfield_12100 	|	 Nome: Target End Date
+ID: customfield_11920 	|	 Nome: LTE Band 12
+ID: customfield_10710 	|	 Nome: MUT SW Type
+ID: customfield_11922 	|	 Nome: LTE Band 29
+ID: customfield_10711 	|	 Nome: Parameter History
+ID: customfield_11801 	|	 Nome: Previous Test Result
+ID: customfield_10712 	|	 Nome: FP TestCases
+ID: customfield_11800 	|	 Nome: Feature ID
+ID: customfield_11921 	|	 Nome: LTE Band 17 (Using MFBI)
+ID: customfield_11924 	|	 Nome: ADAPT
+ID: customfield_11803 	|	 Nome: All Test Plan Ids
+ID: customfield_10713 	|	 Nome: Select Defect CRs
+ID: customfield_11923 	|	 Nome: LTE Band 30
+ID: customfield_11802 	|	 Nome: Test Plan Primary Purpose
+ID: customfield_10714 	|	 Nome: Total Defect CRs In Test Plan
+ID: customfield_11926 	|	 Nome: NR-UM-DV, NO-UM-DV
+ID: customfield_11805 	|	 Nome: Product Activity Status
+ID: customfield_11925 	|	 Nome: NR-UM-DO, NO-UM-DO
+ID: customfield_11804 	|	 Nome: Product HW Revision
+ID: customfield_11807 	|	 Nome: Carrier
+ID: customfield_11928 	|	 Nome: Stocked Connectivity Device – Data Only
+ID: progress 	|	 Nome: Progress
+ID: customfield_11806 	|	 Nome: SW Release Location
+ID: customfield_11927 	|	 Nome: Stocked Phone (Feat & Smartphone) – Voice + Data
+ID: votes 	|	 Nome: Votes
+ID: customfield_11809 	|	 Nome: Epic Link
+ID: worklog 	|	 Nome: Log Work
+ID: customfield_11808 	|	 Nome: Sprint
+ID: customfield_11929 	|	 Nome: Stocked Connectivity Device – Voice + Data
+ID: issuetype 	|	 Nome: Issue Type
+ID: customfield_10150 	|	 Nome: Remote Defect CR
+ID: customfield_10151 	|	 Nome: Do_not_use_Blocked Reason
+ID: project 	|	 Nome: Project
+ID: customfield_10152 	|	 Nome: Other Reason
+ID: customfield_13300 	|	 Nome: SIM Card
+ID: customfield_10153 	|	 Nome: Select Test Plan CR(s)
+ID: customfield_11000 	|	 Nome: Test Procedure History
+ID: customfield_11001 	|	 Nome: KPI KeywordOld
+ID: customfield_10154 	|	 Nome: Select Filters
+ID: customfield_10155 	|	 Nome: Select Test Case CR(s)
+ID: customfield_13301 	|	 Nome: SKU
+ID: customfield_10148 	|	 Nome: Test Results
+ID: customfield_10149 	|	 Nome: Known Defect
+ID: customfield_10700 	|	 Nome: Select CR Test Plan Ids
+ID: environment 	|	 Nome: Environment
+ID: customfield_10701 	|	 Nome: Requirements Traceability
+ID: customfield_11913 	|	 Nome: 2G-Only Device
+ID: customfield_10702 	|	 Nome: Duplicate Test Case Number
+ID: customfield_10703 	|	 Nome: Version
+ID: resolutiondate 	|	 Nome: Resolved
+ID: customfield_11915 	|	 Nome: 2G Removal (Data-only Devices)
+ID: customfield_10704 	|	 Nome: MUT HW Revision
+ID: customfield_11914 	|	 Nome: 3G Support (Includes 2G but no LTE)
+ID: customfield_10705 	|	 Nome: Campaign Labels
+ID: customfield_10706 	|	 Nome: Device Under Test 2
+ID: customfield_11917 	|	 Nome: LTE Bands 2, 4, 5, 17 and Data ONLY
+ID: customfield_11916 	|	 Nome: LTE 2/5-2G/3G any band & LTE Bands 2, 4, 5, 17
+ID: customfield_10707 	|	 Nome: SME Approved
+ID: customfield_11919 	|	 Nome: LTE Band 7
+ID: customfield_10708 	|	 Nome: MUT PRL
+ID: customfield_10709 	|	 Nome: MUT Channel
+ID: customfield_11918 	|	 Nome: VoLTE Device
+ID: watches 	|	 Nome: Watchers
+ID: customfield_10140 	|	 Nome: Barcode or ESN/MEID/IMEI
+ID: customfield_10141 	|	 Nome: Primary Component
+ID: customfield_10142 	|	 Nome: Secondary Component
+ID: customfield_11110 	|	 Nome: Set KPI Target and Tolerance
+ID: customfield_12200 	|	 Nome: Test Plan ID - Summary
+ID: customfield_11111 	|	 Nome: KPI Set
+ID: customfield_10143 	|	 Nome: Reference Device name
+ID: customfield_11112 	|	 Nome: Post Soak
+ID: customfield_10144 	|	 Nome: Secondary channel
+ID: customfield_10145 	|	 Nome: Bandwidth
+ID: customfield_11113 	|	 Nome: Pre-Soak
+ID: customfield_11114 	|	 Nome: %Diff
+ID: customfield_10146 	|	 Nome: Temperature
+ID: customfield_11115 	|	 Nome: Time Difference
+ID: customfield_10147 	|	 Nome: Voltage
+ID: customfield_10137 	|	 Nome: KPI Measurement Unit
+ID: customfield_11105 	|	 Nome: Reference PRL
+ID: customfield_11106 	|	 Nome: Reference Channel
+ID: customfield_10138 	|	 Nome: Test Plan Standard Execution Time
+ID: customfield_11107 	|	 Nome: KPI Average
+ID: customfield_11900 	|	 Nome: Team to Execute
+ID: customfield_10139 	|	 Nome: Test Plan Deep Dive Execution Time
+ID: customfield_11108 	|	 Nome: KPI Enter Results
+ID: customfield_11109 	|	 Nome: KPI Test Plan Target
+ID: customfield_11902 	|	 Nome: carrierDocId
+ID: customfield_11901 	|	 Nome: CarrierCalcSeverity
+ID: customfield_11904 	|	 Nome: carrierReqType
+ID: customfield_11903 	|	 Nome: CarrierProductReqId
+ID: customfield_11906 	|	 Nome: Carrier Req
+ID: customfield_11905 	|	 Nome: CarrierTestCaseNumber
+ID: customfield_11908 	|	 Nome: carrierTestGroup
+ID: customfield_11907 	|	 Nome: carrierTestPlan
+ID: updated 	|	 Nome: Updated
+ID: customfield_11909 	|	 Nome: Equipment
+ID: timeoriginalestimate 	|	 Nome: Original Estimate
+ID: description 	|	 Nome: Description
+ID: customfield_10130 	|	 Nome: SW Type
+ID: customfield_10131 	|	 Nome: Duplicate CR
+ID: customfield_10010 	|	 Nome: Radio Communication Technologies
+ID: customfield_11100 	|	 Nome: Apply Constraints
+ID: customfield_10011 	|	 Nome: CFC Site
+ID: customfield_10132 	|	 Nome: Change history via excel
+ID: customfield_13401 	|	 Nome: Automation Link
+ID: customfield_10133 	|	 Nome: KPI Target
+ID: customfield_11101 	|	 Nome: Parameter value
+ID: customfield_10012 	|	 Nome: SA Matrix (SA Summary Tab)
+ID: customfield_13400 	|	 Nome: Automation Status
+ID: customfield_10134 	|	 Nome: KPI Upper Spec Limit
+ID: customfield_11102 	|	 Nome: Reference ESN/MEID/IMEI
+ID: customfield_10135 	|	 Nome: KPI Lower Spec Limit
+ID: customfield_11103 	|	 Nome: Reference MDN
+ID: timetracking 	|	 Nome: Time Tracking
+ID: customfield_10136 	|	 Nome: KPI Bilateral Limit
+ID: customfield_11104 	|	 Nome: Reference MIN
+ID: customfield_10005 	|	 Nome: Program Manager
+ID: customfield_10126 	|	 Nome: Test Plan Instructions
+ID: customfield_10006 	|	 Nome: Program Name
+ID: customfield_10127 	|	 Nome: Start Date
+ID: customfield_10128 	|	 Nome: End Date
+ID: customfield_10007 	|	 Nome: Project ID
+ID: customfield_10129 	|	 Nome: Product
+ID: customfield_10008 	|	 Nome: Project Name
+ID: customfield_10800 	|	 Nome: Select Labels
+ID: customfield_10801 	|	 Nome: DO NOT USE Test Procedure History
+ID: customfield_10009 	|	 Nome: Push-To-Talk
+ID: customfield_10802 	|	 Nome: MUT Device Name
+ID: customfield_10803 	|	 Nome: SME Approver
+ID: customfield_10804 	|	 Nome: FP ID
+ID: summary 	|	 Nome: Summary
+ID: customfield_10120 	|	 Nome: Primary Software
+ID: customfield_10000 	|	 Nome: Product Comments
+ID: customfield_10121 	|	 Nome: Secondary Software
+ID: customfield_10122 	|	 Nome: Configuration
+ID: customfield_12301 	|	 Nome: Cricket
+ID: customfield_10001 	|	 Nome: Product Group
+ID: customfield_10123 	|	 Nome: Donotuse_Primary purpose
+ID: customfield_10002 	|	 Nome: Product ID (PMD ID)
+ID: customfield_12300 	|	 Nome: Softphone
+ID: customfield_10003 	|	 Nome: Product Status
+ID: customfield_10124 	|	 Nome: Secondary purpose
+ID: customfield_10004 	|	 Nome: Program ID
+ID: customfield_10125 	|	 Nome: Test Plan Run Constraints
+ID: customfield_10115 	|	 Nome: Min Deep dive execution time
+ID: customfield_10116 	|	 Nome: Max Deep dive execution time
+ID: customfield_13503 	|	 Nome: Variant
+ID: customfield_10117 	|	 Nome: Team Name
+ID: customfield_10118 	|	 Nome: Rejection Reason
+ID: customfield_10119 	|	 Nome: Test Plan Name
+ID: customfield_11970 	|	 Nome: Due Date
+ID: comment 	|	 Nome: Comment
+ID: fixVersions 	|	 Nome: Fix Version/s
+ID: customfield_10110 	|	 Nome: Do_not_use_KPI Keyword
+ID: customfield_10111 	|	 Nome: Dont_use_Regulatory body
+ID: customfield_11200 	|	 Nome: Legacy ID
+ID: customfield_13500 	|	 Nome: Score
+ID: customfield_10112 	|	 Nome: Environments Change
+ID: customfield_11201 	|	 Nome: Legacy Data
+ID: customfield_13502 	|	 Nome: Competitor Phone
+ID: customfield_11202 	|	 Nome: Execution Method
+ID: customfield_10113 	|	 Nome: Min Standard execution time
+ID: customfield_13501 	|	 Nome: Bug2Go Link
+ID: customfield_10114 	|	 Nome: Max Standard execution time
+ID: customfield_11203 	|	 Nome: Reason
+ID: customfield_10104 	|	 Nome: Regression Level
+ID: customfield_10105 	|	 Nome: Specification
+ID: customfield_10106 	|	 Nome: Donotuse_Requirements Traceability
+ID: customfield_10107 	|	 Nome: KPI Testing
+ID: customfield_10900 	|	 Nome: Custom Components
+ID: customfield_10108 	|	 Nome: KPI Start Point
+ID: customfield_10901 	|	 Nome: Explanation
+ID: customfield_10109 	|	 Nome: KPI End Point
+ID: customfield_10902 	|	 Nome: Test Plan CR
+ID: customfield_10903 	|	 Nome: Parameters Table Data
+ID: priority 	|	 Nome: Priority
+ID: customfield_12400 	|	 Nome: Secondary Product
+ID: customfield_10100 	|	 Nome: Test Case Title
+ID: customfield_10101 	|	 Nome: Primary domain
+ID: customfield_10102 	|	 Nome: Secondary domain
+ID: customfield_10103 	|	 Nome: Reference IMEI
+ID: timeestimate 	|	 Nome: Remaining Estimate
+ID: versions 	|	 Nome: Affects Version/s
+ID: status 	|	 Nome: Status
+ID: issuekey 	|	 Nome: Key
+ID: customfield_11300 	|	 Nome: Custom Secondary Domain
+ID: customfield_11301 	|	 Nome: Sample Sets Attempted
+ID: customfield_12503 	|	 Nome: Error Type
+ID: customfield_12502 	|	 Nome: Test Case Method Name
+ID: aggregatetimeestimate 	|	 Nome: Σ Remaining Estimate
+ID: creator 	|	 Nome: Creator
+ID: aggregateprogress 	|	 Nome: Σ Progress
+ID: customfield_10200 	|	 Nome: TestCases In TestPlan
+ID: customfield_12501 	|	 Nome: Script Location
+ID: customfield_12500 	|	 Nome: Script Name
+ID: customfield_11403 	|	 Nome: MUT Comment
+ID: customfield_10434 	|	 Nome: Submitter
+ID: customfield_10435 	|	 Nome: Execution Time
+ID: customfield_11402 	|	 Nome: MUT Configuration
+ID: customfield_10436 	|	 Nome: Debug Time
+ID: customfield_11405 	|	 Nome: Git Location
+ID: customfield_10437 	|	 Nome: Log Location
+ID: customfield_11404 	|	 Nome: Reference Comment
+ID: customfield_11406 	|	 Nome: KPI ID
+ID: timespent 	|	 Nome: Time Spent
+ID: aggregatetimespent 	|	 Nome: Σ Time Spent
+ID: customfield_10430 	|	 Nome: Do_nt_use_Channel
+ID: customfield_10310 	|	 Nome: Donot use Test Plan Standard Execution Time
+ID: customfield_10431 	|	 Nome: Primary channel
+ID: customfield_10311 	|	 Nome: Blocked CR Number
+ID: customfield_11401 	|	 Nome: MUT Secondary Software
+ID: customfield_10432 	|	 Nome: Test Date
+ID: customfield_11400 	|	 Nome: MUT Primary Software
+ID: customfield_10433 	|	 Nome: Set Up Time
+ID: customfield_12602 	|	 Nome: AE Description
+ID: customfield_10423 	|	 Nome: MUT ESN/MEID/IMEI
+ID: customfield_10302 	|	 Nome: Select Remote Defect CRs
+ID: customfield_12601 	|	 Nome: Applicability Expression
+ID: customfield_10303 	|	 Nome: Donot_use_Max Min Standard execution time
+ID: customfield_10424 	|	 Nome: MUT Etch Number
+ID: customfield_10425 	|	 Nome: Do_not_use_MUT Device Name
+ID: customfield_10304 	|	 Nome: Donot_use_Max  Max Standard execution time
+ID: customfield_12604 	|	 Nome: NO-UM
+ID: customfield_10305 	|	 Nome: Donot_use_Max  Min Deep dive execution time
+ID: customfield_10426 	|	 Nome: MUT MIN
+ID: customfield_12603 	|	 Nome: Module
+ID: customfield_10306 	|	 Nome: Donot_use_Max Deep dive execution time
+ID: customfield_10427 	|	 Nome: MUT MDN
+ID: customfield_12606 	|	 Nome: MVNO
+ID: customfield_10307 	|	 Nome: CR Test Results
+ID: customfield_10428 	|	 Nome: Do_not_use_PRL
+ID: customfield_12605 	|	 Nome: NO-AM
+ID: customfield_12608 	|	 Nome: NR-AM
+ID: customfield_10429 	|	 Nome: Reference Software
+ID: customfield_12607 	|	 Nome: NR-UM
+ID: customfield_10309 	|	 Nome: Select Remote Filters
+ID: workratio 	|	 Nome: Work Ratio
+ID: thumbnail 	|	 Nome: Images
+ID: created 	|	 Nome: Created
+ID: customfield_10420 	|	 Nome: DUse_MUT SW Type
+ID: customfield_12600 	|	 Nome: Applicability Expression Name
+ID: customfield_10421 	|	 Nome: Donot_use_MUT HW Revision
+ID: customfield_10300 	|	 Nome: Remote System
+ID: customfield_10422 	|	 Nome: MUT Barcode
+ID: customfield_10301 	|	 Nome: Select Remote System
+ID: customfield_10412 	|	 Nome: Plans To Copy
+ID: customfield_10413 	|	 Nome: Do_not_use_Optimized Plan
+ID: customfield_10414 	|	 Nome: Do_not_use_Feature Id
+ID: customfield_10415 	|	 Nome: Do_not_use_Perfecto
+ID: customfield_10416 	|	 Nome: Do_not_use_Category
+ID: customfield_10417 	|	 Nome: Do_not_use_CAT5-3-1
+ID: customfield_10418 	|	 Nome: Do_not_use_GCF FT
+ID: customfield_10419 	|	 Nome: MUT Software
+ID: customfield_13001 	|	 Nome: Remote Issue Information
+ID: customfield_13002 	|	 Nome: Issue Information
+ID: customfield_10410 	|	 Nome: CR Execs Delete
+ID: customfield_11500 	|	 Nome: KPI Keyword
+ID: customfield_10411 	|	 Nome: Do_not_use_FT Group
+ID: customfield_10401 	|	 Nome: Test Case ID
+ID: customfield_10402 	|	 Nome: Constraints
+ID: security 	|	 Nome: Security Level
+ID: customfield_10403 	|	 Nome: Parameters
+ID: customfield_10404 	|	 Nome: Tertiary domain
+ID: attachment 	|	 Nome: Attachment
+ID: customfield_10405 	|	 Nome: Group Name
+ID: customfield_10406 	|	 Nome: Test Sub Group Type
+ID: customfield_10407 	|	 Nome: Region
+ID: customfield_10408 	|	 Nome: Test Plan Ids
+ID: customfield_10409 	|	 Nome: Do_not_use_XLine
+ID: customfield_10400 	|	 Nome: TotalTestCaseForUpdation
+ID: customfield_11964 	|	 Nome: CarrierTestCaseDocumentNumber
+ID: customfield_10511 	|	 Nome: GCF FT
+ID: customfield_10512 	|	 Nome: Select Test Cases
+ID: customfield_11600 	|	 Nome: Test Run by
+ID: customfield_11966 	|	 Nome: Publish Status
+ID: customfield_10513 	|	 Nome: Regulatory body
+ID: customfield_10514 	|	 Nome: HW Revision
+ID: customfield_11965 	|	 Nome: Substantive Change
+ID: customfield_10515 	|	 Nome: Primary purpose
+ID: customfield_11968 	|	 Nome: RAT Testing Guidance
+ID: customfield_10516 	|	 Nome: CR Product
+ID: customfield_11967 	|	 Nome: Stocked Phone – Voice Only
+ID: customfield_10517 	|	 Nome: CR SW Type
+ID: customfield_11969 	|	 Nome: Legacy Exec Date
