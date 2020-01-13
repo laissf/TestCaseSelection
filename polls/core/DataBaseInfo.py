@@ -1,4 +1,4 @@
-from .models import QueryType, Filters
+from polls.models import QueryType, Filters
 
 #ANDROID Q SINGLE LINE
 single_line = QueryType()
