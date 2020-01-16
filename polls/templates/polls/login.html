@@ -2,9 +2,46 @@
         "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+
     <title>Test Plan Creation</title>
 </head>
-<body>
+<body bgcolor="GhostWhite" topmargin="30%" leftmargin="30%">
+    <center>
 
+        <form action="{% url 'polls:login' %}" method="post">
+        {% csrf_token %}
+<!--  <div class="imgcontainer">-->
+<!--    <img src="img_avatar2.png" alt="Avatar" class="avatar">-->
+<!--  </div>-->
+
+    <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Core id" name="uname" required>
+    </div>
+
+    <div>
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+    </div>
+
+    <div>
+        <center>
+            <button type="submit">Login</button>
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember
+            </label>
+    </div>
+
+<!--    <div class="container" style="background-color:#f1f1f1">-->
+<!--        <button type="button" class="cancelbtn">Cancel</button>-->
+<!--    </div>-->
+             {%if erro %}
+         <div>
+            <H1 >{{erro}}</H1>
+        </div>
+        {% endif%}
+        </form>
+
+    </center>
 </body>
 </html>

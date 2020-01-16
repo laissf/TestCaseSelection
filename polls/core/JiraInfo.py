@@ -1,17 +1,20 @@
-from jira import JIRA
 import inspect
 #from .Spreadsheet import open_sheet, get_features
+from jira import JIRA
 
-directory = 'https://dalek.mot.com/'
 
-def access_jira(coreid, password, tc_id):
+def access_jira(coreid, password, directory = 'https://dalek.mot.com/'):
     jira = JIRA(server=directory, auth=(coreid, password))
-    issues = jira.issue(tc_id)
     return jira
 
 def filter_jira(jira,filter):
     tcs_list = jira.search_issues(filter, maxResults=3000)
     return tcs_list
+
+def identific_tp (jira, id_tp):
+    tp = jira.issue(id_tp)
+    return tp
+
 
 # def compare_features(tcs_list, cell_list):
 #     tcs = tcs_list.split(',')

@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>TestPlan Filters</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+</head>
+<body>
+
+
+<div class="row">
+    <div class="col s12 m6">
+        <div class="card">
+            <div class="card-content">
+                {% csrf_token %}
+                <form multiple action="{% url 'polls:filter' %}" method="post">
+                     {% for i in lista %}
+                    <label>{{i.type}}</label>
+                    <select class="browser-default">
+                        <option value="" disabled selected>Choose a filter</option>
+                        {% for filter in i.filters_set.all%}
+                        <select class="input-field col s12">
+
+                                <option value="{{filter.plan}}" > {{filter.plan}} </option>
+
+
+                        </select>>
+                    </select>
+                        {% endfor %}
+                    {% endfor %}
+
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('select').formSelect();
+  });</script>
+
+</body>
+</html>

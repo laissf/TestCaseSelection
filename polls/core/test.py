@@ -1,15 +1,15 @@
-from jira import JIRA
-import inspect
-
-directory = 'https://dalek.mot.com/'
-
-
-jira = JIRA(server=directory, auth=('laissf', 'Abre2503'))
-issues = jira.issue('MCA-2144102')
-
-# pegar tcs a partir de um filtro e mostrar na  tela
-for issue in jira.search_issues('project = 11010 AND issuetype = "Test Case" AND labels = TMO_Reg AND labels = Plat_Reg AND status != closed ORDER BY cf[10104] ASC', maxResults=3000):
-    print('{}'.format(issue.key))
+# from jira import JIRA
+# import inspect
+#
+# directory = 'https://dalek.mot.com/'
+#
+#
+# jira = JIRA(server=directory, auth=('laissf', 'Abre2503'))
+# issues = jira.issue('MCA-2144102')
+#
+# # pegar tcs a partir de um filtro e mostrar na  tela
+# for issue in jira.search_issues('project = 11010 AND issuetype = "Test Case" AND labels = TMO_Reg AND labels = Plat_Reg AND status != closed ORDER BY cf[10104] ASC', maxResults=3000):
+#     print('{}'.format(issue.key))
 
 
 
