@@ -3,7 +3,11 @@
 <html>
 <head>
     <title>TestPlan Filters</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">-->
+    {% load static %}
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/materialize.min.css'%}"  media="screen,projection"/>
+
 </head>
 <body>
 
@@ -13,22 +17,38 @@
         <div class="card">
             <div class="card-content">
                 {% csrf_token %}
-                <form multiple action="{% url 'polls:filter' %}" method="post">
+                <form action="{% url 'polls:filter' %}" method="post">
                      {% for i in lista %}
-                    <label>{{i.type}}</label>
-                    <select class="browser-default">
-                        <option value="" disabled selected>Choose a filter</option>
-                        {% for filter in i.filters_set.all%}
-                        <select class="input-field col s12">
+                    <div class="row">
+                        {% if i.type == 'Experiences' or i.type == 'Data Migration' %}
+                        <div class="col s12">
+                            <label>{{i.type}}</label>
+                            <select multiple>
+                                <option value="" disabled selected>Choose a filter</option>
+                                {% for filter in i.filters_set.all%}
+                                <!--<select class="input-field col s12"> -->
+                                        <option value="{{filter.plan}}" > {{filter.plan}} </option>
+                                <!--</select>>-->
+                                {% endfor %}
+                            </select>
 
-                                <option value="{{filter.plan}}" > {{filter.plan}} </option>
+                        </div>
+                        {% else %}
+                        <div class="col s12">
+                            <label>{{i.type}}</label>
+                            <select>
+                                <option value="" disabled selected>Choose a filter</option>
+                                {% for filter in i.filters_set.all%}
+                                <!--<select class="input-field col s12"> -->
+                                        <option value="{{filter.plan}}" > {{filter.plan}} </option>
+                                <!--</select>>-->
+                                {% endfor %}
+                            </select>
 
-
-                        </select>>
-                    </select>
-                        {% endfor %}
+                        </div>
+                        {% endif %}
+                    </div>
                     {% endfor %}
-
                 </form>
 
 
@@ -38,10 +58,12 @@
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>-->
+<script type="text/javascript" src="{% static 'js/materialize.min.js'%}"></script>
 <script type="text/javascript">
   $(document).ready(function(){
-    $('select').formSelect();
+    console.log("carregou");
+    $('select').material_select();
   });</script>
 
 </body>
