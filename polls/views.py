@@ -84,5 +84,3 @@ def list_filters(request):
         lista = QueryType.objects.all()
         return render(request, 'polls/filter.html', {"lista":lista})
 
-def teste(request):
-    return render(request, 'polls/teste.html', {})

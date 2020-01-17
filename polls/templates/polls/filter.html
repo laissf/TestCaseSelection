@@ -26,9 +26,7 @@
                             <select multiple>
                                 <option value="" disabled selected>Choose a filter</option>
                                 {% for filter in i.filters_set.all%}
-                                <!--<select class="input-field col s12"> -->
                                         <option value="{{filter.plan}}" > {{filter.plan}} </option>
-                                <!--</select>>-->
                                 {% endfor %}
                             </select>
 
