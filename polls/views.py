@@ -1,9 +1,9 @@
 from django.http import HttpResponseRedirect
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import get_object_or_404, render, redirect
 from django.urls import reverse
 from django.views import generic
 from .models import Filters, QueryType
-from .core.JiraInfo import access_jira, filter_jira, identific_tp
+from .core.JiraInfo import access_jira, filter_jira, identific_tp, compare_features
 from .core.Spreadsheet import open_sheet, get_features
 from django.core.cache import caches, cache
 from .core.DataBaseInfo import createBD
@@ -23,6 +23,9 @@ def login_user(request):
         password = request.POST["psw"]
         try:
            access_jira(coreid, password)
+           cache.set("login", coreid)
+           cache.set("senha", password)
+           return redirect('../tpinformation/')
 
         except:
             erro = {"erro":"Core id or password incorrect! "}
@@ -33,37 +36,35 @@ def login_user(request):
 #id tp requisition
 def info_tp(request):
     if request.POST and request.POST["id_tp"]:
-        id_tp =request.POST["id_tp"]
+        id_tp = request.POST["id_tp"]
 
         try:
-            identific_tp(getjira(),id_tp)
-
+            identific_tp(getjira(), id_tp)
+            cache.set("","")
         except:
-            error = {"erro":"Test Plan not found. Try again"}
+            error = {"erro": "Test Plan not found. Try again"}
             return render(request, 'polls/info.html', error)
     else:
         return render(request, 'polls/info.html', {})
 
-#reg level requisition
+    # reg level requisition
     if request.POST and request.POST["reg_level"]:
-        reg_level=request.POST["reg_level"]
+        reg_level = request.POST["reg_level"]
+        reg_level.split(",")
+        cache.set("", "")
 
-        try:
-            if (reg_level>0)and(reg_level<=4):
-                return render(request, 'polls/info.html', reg_level)
-
-        except:
-            erro_reg_level = {"erro_reg_level ":"This is  not a valide value Try again"}
-            return render(request, 'polls/info.html', erro_reg_level)
     else:
         return render(request, 'polls/info.html', {})
 
-#spreadsheet requisition
-    if request.POST and request.POST["url_spreadsheet"]:  # nomenclatura no html
-        url_spreadsheet = request.POST["url_spreadsheet"]  # nomenclatura no html
+    # spreadsheet requisition
+    if request.POST and request.POST["url_spreadsheet"]:
+        url_spreadsheet = request.POST["url_spreadsheet"]
+        cache.set("", "")
 
         try:
-           open_sheet(url_spreadsheet)
+            sheet = open_sheet(url_spreadsheet)
+            get_features(sheet)
+            return redirect('../filter/', {})
 
         except:
             error_spreadsheet = {"erro": "Spreadsheet not found!"}
@@ -71,12 +72,17 @@ def info_tp(request):
     else:
         return render(request, 'polls/info.html', {})
 
+
 #credentials jira storage
 def getjira():
     return access_jira(cache.get('login'),cache.get('senha'))
 
 #filters list
 def list_filters(request):
+
+
+
+
     if request.POST and request.POST["tp_filter"]:  # nomenclatura no html
         tp_filter = request.POST["tp_filter"]  # nomenclatura no html
         filter_jira(getjira(),QueryType.objects.find(plan=tp_filter))
@@ -84,3 +90,9 @@ def list_filters(request):
         lista = QueryType.objects.all()
         return render(request, 'polls/filter.html', {"lista":lista})
 
+
+#compare features
+def tcs_list(request):
+
+    lista = QueryType.objects.all()
+    return render(request, 'polls/filter.html', {"lista":lista})
