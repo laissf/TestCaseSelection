@@ -53,3 +53,8 @@ for issue in jira.search_issues('project = 11010 AND issuetype = "Test Case" AND
     #
     # else:
 
+
+
+ #QueryType.objects.all().delete()
+
+

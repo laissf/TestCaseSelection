@@ -8,12 +8,13 @@ from .core.Spreadsheet import open_sheet, get_features
 from django.core.cache import caches, cache
 from .core.DataBaseInfo import createBD
 
-#filter_jira(access_jira("",""),QueryType.objects.find(plan="CoreApps Common"))
+
+#credentials jira storage in cache
+def getjira():
+    return access_jira(cache.get('login'),cache.get('senha'))
 
 # Create your views here.
-
 def login_user(request):
-    #QueryType.objects.all().delete()
     #inicia o DataBaseInfo
     if len(QueryType.objects.all()) <1:
         createBD()
@@ -39,8 +40,10 @@ def info_tp(request):
         id_tp = request.POST["id_tp"]
 
         try:
-            identific_tp(getjira(), id_tp)
-            cache.set("","")
+            acess=getjira()
+            identific_tp(acess, id_tp)
+            cache.set("acessoJira",acess)
+            cache.set("id_tp", id_tp)
         except:
             error = {"erro": "Test Plan not found. Try again"}
             return render(request, 'polls/info.html', error)
@@ -51,7 +54,7 @@ def info_tp(request):
     if request.POST and request.POST["reg_level"]:
         reg_level = request.POST["reg_level"]
         reg_level.split(",")
-        cache.set("", "")
+        cache.set("reg_level", reg_level)
 
     else:
         return render(request, 'polls/info.html', {})
@@ -59,7 +62,7 @@ def info_tp(request):
     # spreadsheet requisition
     if request.POST and request.POST["url_spreadsheet"]:
         url_spreadsheet = request.POST["url_spreadsheet"]
-        cache.set("", "")
+        cache.set("url_spreadsheet", url_spreadsheet)
 
         try:
             sheet = open_sheet(url_spreadsheet)
@@ -73,26 +76,30 @@ def info_tp(request):
         return render(request, 'polls/info.html', {})
 
 
-#credentials jira storage
-def getjira():
-    return access_jira(cache.get('login'),cache.get('senha'))
-
 #filters list
-def list_filters(request):
-
-
-
-
-    if request.POST and request.POST["tp_filter"]:  # nomenclatura no html
-        tp_filter = request.POST["tp_filter"]  # nomenclatura no html
-        filter_jira(getjira(),QueryType.objects.find(plan=tp_filter))
-    else:
-        lista = QueryType.objects.all()
-        return render(request, 'polls/filter.html', {"lista":lista})
-
-
-#compare features
-def tcs_list(request):
-
+def tp_filter(request):
     lista = QueryType.objects.all()
     return render(request, 'polls/filter.html', {"lista":lista})
+
+#list types of regression plans
+def list_filter(request):
+    if request.POST and request.POST["tp_filter"]:  # nomenclatura no html
+        tp_filter = request.POST["tp_filter"]  # nomenclatura no html
+        print(tp_filter)
+        try:
+            query = QueryType.objects.get(type=tp_filter)
+            filters = query.filters_set.all()
+            label = tp_filter
+            if query.type == "Experiences" or query.type == "Data Migration":
+                ed = True
+            else:
+                ed = False
+
+
+            return render(request, "polls/list_filter.html",{"lista":filters,"query":ed, "label" : label})
+        except:
+            error_tp = {"erro": "You need to select an intem"}
+            return render(request, 'polls/list_filter.html', error_tp)
+    else:
+        pass
+
