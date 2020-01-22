@@ -7,7 +7,7 @@
 <body bgcolor="GhostWhite" topmargin="25%" leftmargin="25%">
     <center>
 
-        <form action="{% url 'polls:tcs_list' %}" method="post">
+        <form action="{% url 'polls:tp_filter' %}" method="post">
         {% csrf_token %}
     <div class="container">
         <label for="id_tp"><b>ID Test Plan</b></label>
@@ -33,9 +33,9 @@
         <label for="url_spreadsheet"><b>Spreadsheet url</b></label>
         <input type="url_spreadsheet" placeholder="Ex: http://https://docs.google.com/spreadsheets" name="url_spreadsheet" required>
          <button type="upload">upload</button>
-         {%if error_spreadsheet %}
+         {%if error %}
          <div>
-            <H1>{{error_spreadsheet}}</H1>
+            <H1>{{error}}</H1>
         </div>
         {% endif%}
     </div>

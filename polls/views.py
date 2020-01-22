@@ -4,7 +4,7 @@ from django.urls import reverse
 from django.views import generic
 from .models import Filters, QueryType
 from .core.JiraInfo import access_jira, filter_jira, identific_tp, compare_features
-from .core.Spreadsheet import open_sheet, get_features
+from .core.Spreadsheet import open_sheet
 from django.core.cache import caches, cache
 from .core.DataBaseInfo import createBD
 
@@ -24,8 +24,9 @@ def login_user(request):
         password = request.POST["psw"]
         try:
            access_jira(coreid, password)
-           cache.set("login", coreid)
-           cache.set("senha", password)
+           cache.set("login", coreid, 360000)
+           cache.set("senha", password, 360000)
+           return redirect('../tpinformation/')
            return redirect('../tpinformation/')
 
         except:
@@ -36,48 +37,52 @@ def login_user(request):
 
 #id tp requisition
 def info_tp(request):
-    if request.POST and request.POST["id_tp"]:
-        id_tp = request.POST["id_tp"]
-
-        try:
-            acess=getjira()
-            identific_tp(acess, id_tp)
-            cache.set("acessoJira",acess)
-            cache.set("id_tp", id_tp)
-        except:
-            error = {"erro": "Test Plan not found. Try again"}
-            return render(request, 'polls/info.html', error)
-    else:
-        return render(request, 'polls/info.html', {})
-
-    # reg level requisition
-    if request.POST and request.POST["reg_level"]:
-        reg_level = request.POST["reg_level"]
-        reg_level.split(",")
-        cache.set("reg_level", reg_level)
-
-    else:
-        return render(request, 'polls/info.html', {})
-
-    # spreadsheet requisition
-    if request.POST and request.POST["url_spreadsheet"]:
-        url_spreadsheet = request.POST["url_spreadsheet"]
-        cache.set("url_spreadsheet", url_spreadsheet)
-
-        try:
-            sheet = open_sheet(url_spreadsheet)
-            get_features(sheet)
-            return redirect('../filter/', {})
-
-        except:
-            error_spreadsheet = {"erro": "Spreadsheet not found!"}
-            return render(request, 'polls/info.html', error_spreadsheet)
-    else:
-        return render(request, 'polls/info.html', {})
+    return render(request, 'polls/info.html', {})
 
 
 #filters list
 def tp_filter(request):
+    if request.POST["id_tp"]:
+        id_tp = request.POST["id_tp"]
+        try:
+            acess = getjira()
+            identific_tp(acess, id_tp)
+            cache.set("acessoJira", acess, 360000)
+            cache.set("id_tp", id_tp, 360000)
+            print("Salvou id")
+        except:
+            error = {"erro": "Test Plan not found. Try again"}
+            return render(request, 'polls/info.html', error)
+    else:
+        error = {"erro": "Sem ID"}
+        return render(request, 'polls/info.html', error)
+
+        # reg level requisition
+    if request.POST["reg_level"]:
+        reg_level = request.POST["reg_level"]
+        reg_level.split(",")
+        cache.set("reg_level", reg_level, 360000)
+        print("Salvou rl")
+
+    else:
+        error = {"erro": "sem reg level"}
+        return redirect('tpinformation/', args=error )
+
+        # spreadsheet requisition
+    if request.POST and request.POST["url_spreadsheet"]:
+        url_spreadsheet = request.POST["url_spreadsheet"]
+        cache.set("url_spreadsheet", url_spreadsheet, 360000)
+
+        try:
+            open_sheet(url_spreadsheet)
+            print("Salvou link")
+        except Exception as e:
+            print("Error: " + str(e))
+            error_spreadsheet = {"error": "Spreadsheet not found!"}
+            return render(request, 'polls/info.html', error_spreadsheet)
+    else:
+        error = {"erro": "sem sheet"}
+        return redirect('tpinformation/', args=error)
     lista = QueryType.objects.all()
     return render(request, 'polls/filter.html', {"lista":lista})
 
@@ -85,7 +90,6 @@ def tp_filter(request):
 def list_filter(request):
     if request.POST and request.POST["tp_filter"]:  # nomenclatura no html
         tp_filter = request.POST["tp_filter"]  # nomenclatura no html
-        print(tp_filter)
         try:
             query = QueryType.objects.get(type=tp_filter)
             filters = query.filters_set.all()
@@ -94,12 +98,32 @@ def list_filter(request):
                 ed = True
             else:
                 ed = False
-
-
             return render(request, "polls/list_filter.html",{"lista":filters,"query":ed, "label" : label})
+
         except:
             error_tp = {"erro": "You need to select an intem"}
             return render(request, 'polls/list_filter.html', error_tp)
-    else:
-        pass
 
+
+def tcs_list(request):
+    jira = getjira()
+    reg_level = cache.get('reg_level')
+
+    if "one_option" in request.POST:
+        filter = request.POST["one_option"]
+        print(filter)
+        query = Filters.objects.get(plan=filter).query
+        tcs = filter_jira(jira,query)
+
+        tcs_in, tcs_out = compare_features(tcs, cache.get('url_spreadsheet'), reg_level)
+        return render(request, "polls/tcs_list.html", {"tcs_in": tcs_in, "tcs_out": tcs_out})
+
+    elif "multi_options" in request.POST:
+        tcs_lista_enorme = []
+        filters = request.POST.getlist('multi_options')
+        for item in filters:
+            tcs = filter_jira(jira, item)
+            tcs_lista_enorme.extend(tcs)
+
+        tcs_in, tcs_out = compare_features(tcs_lista_enorme, cache.get('url_spreadsheet'), reg_level)
+        return render(request, "polls/tcs_list.html", {"tcs_in": tcs_in, "tcs_out": tcs_out})

@@ -1,5 +1,5 @@
 import inspect
-from .Spreadsheet import open_sheet, get_features
+from .Spreadsheet import open_sheet
 from jira import JIRA
 from fuzzywuzzy import fuzz
 
@@ -25,39 +25,40 @@ def comp(s1, s2):
         return False
 
 #comparing spreadsheet features x tcs features
-def compare_features(tcs_list, cell_list, reg_level):
-    cell_list = get_features(cell_list)
+def compare_features(tcs_list, url_features, reg_level):
+    cell_list = open_sheet(url_features)
     tcs_in = []
     tcs_out = []
     for feat in cell_list:
         for tc in tcs_list:
             primary_dom = tc.fields.customfield_10101
-            secondary_dom = tc.fields.customfield_11300
+            secondary_dom = tc.fields.customfield_10102
             reglevel = tc.fields.customfield_10104
+            print(reglevel)
             label = tc.fields.labels
             title = tc.fields.summary
-            if reglevel not in reg_level:
+            if str(reglevel) not in reg_level:
                 tcs_out.append(tc)
             else:
-                if (comp(feat,primary_dom)):
+                if (comp(feat[0],primary_dom)):
                     tcs_in.append(tc)
                 else:
                     tcs_out.append(tc)
 
                 for i in secondary_dom.split(','):
-                    if comp(feat, i) and tc not in tcs_in:
+                    if comp(feat[0], i) and tc not in tcs_in:
                         tcs_in.append(tc)
                     elif tc not in tcs_out:
                         tcs_out.append(tc)
 
                 for i in label:
-                    if comp(feat, i) and tc not in tcs_in:
+                    if comp(feat[0], i) and tc not in tcs_in:
                         tcs_in.append(tc)
                     elif tc not in tcs_out:
                         tcs_out.append(tc)
 
                 for i in title.split(' '):
-                    if comp(feat, i) and tc not in tcs_in:
+                    if comp(feat[0], i) and tc not in tcs_in:
                         tcs_in.append(tc)
                     elif tc not in tcs_out:
                         tcs_out.append(tc)

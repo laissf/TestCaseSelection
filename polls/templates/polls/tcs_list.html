@@ -6,54 +6,31 @@
     <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">-->
     {% load static %}
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="{% static 'css/materialize.min.css'%}"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="{% static 'css/materialize.min.css'%}" media="screen,projection"/>
 
 </head>
 <body>
+ <form action="{% url 'polls:tcs_list' %}" method="post">
+     {% csrf_token %}
+    <p>
+      <label>
+        <input type="checkbox" class="filled-in" checked="checked" />
+          {%for i in tcs_in %}
+        <span value="{{i.tcs_in}}">{{i.tcs_in}}</span>
+          {%endfor%}
+      </label>
+    </p>
 
 
-<div class="row">
-    <div class="col s12 m6">
-        <div class="card">
-            <div class="card-content">
-                {% csrf_token %}
-                <form action="{% url 'polls:list_filter' %}" method="post">
-                     {% for i in lista %}
-                    <div class="row">
-                        {% if i.type == 'Experiences' or i.type == 'Data Migration' %}
-                        <div class="col s12">
-                            <label>{{i.type}}</label>
-                            <select multiple name="multi_options">
-                                <option value="" disabled selected>Choose a filter</option>
-                                {% for filter in i.filters_set.all%}
-                                        <option value="{{filter.plan}}" > {{filter.plan}} </option>
-                                {% endfor %}
-                            </select>
-
-                        </div>
-                        {% else %}
-                        <div class="col s12">
-                            <label>{{i.type}}</label>
-                            <select name="one_option">
-                                <option value="" disabled selected>Choose a filter</option>
-                                {% for filter in i.filters_set.all%}
-                                <!--<select class="input-field col s12"> -->
-                                        <option value="{{filter.plan}}" > {{filter.plan}} </option>
-                                <!--</select>>-->
-                                {% endfor %}
-                            </select>
-
-                        </div>
-                        {% endif %}
-                    </div>
-                    {% endfor %}
-                </form>
-
-
-            </div>
-        </div>
-    </div>
-</div>
+      <p>
+      <label>
+        <input type="checkbox" />
+          {%for i in tcs_out %}
+        <span value="{{i.tcs_out}}">{{i.tcs_out}}</span>
+          {%endfor%}
+      </label>
+    </p>
+</form>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>-->
@@ -62,7 +39,8 @@
   $(document).ready(function(){
     console.log("carregou");
     $('select').material_select();
-  });</script>
+  });
+</script>
 
 </body>
 </html>
