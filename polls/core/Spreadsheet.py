@@ -14,7 +14,3 @@ def open_sheet (url_features):
     cell_list = sheet.get_all_values()
     return cell_list
 
-#
-# def get_features(sheet):
-#     cell_list = sheet.get
-#     return cell_list
