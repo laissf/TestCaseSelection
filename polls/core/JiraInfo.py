@@ -34,9 +34,12 @@ def compare_features(tcs_list, url_features, reg_level):
             primary_dom = tc.fields.customfield_10101
             secondary_dom = tc.fields.customfield_10102
             reglevel = tc.fields.customfield_10104
-            print(reglevel)
             label = tc.fields.labels
             title = tc.fields.summary
+            key = tc.key
+            tc = {"key": key, "title": title}
+
+
             if str(reglevel) not in reg_level:
                 tcs_out.append(tc)
             else:
@@ -62,7 +65,8 @@ def compare_features(tcs_list, url_features, reg_level):
                         tcs_in.append(tc)
                     elif tc not in tcs_out:
                         tcs_out.append(tc)
-
+    for i in tcs_out:
+        print(i)
     return tcs_in, tcs_out
 
 
