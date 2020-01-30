@@ -10,27 +10,36 @@
 
 </head>
 <body>
- <form action="{% url 'polls:tcs_list' %}" method="post">
+ <form action="" method="post">
      {% csrf_token %}
-    <p>
+    <!--<p>
       <label>
         <input type="checkbox" class="filled-in" checked="checked" />
           {%for i in tcs_in %}
-        <span value="{{i.tcs_in}}">{{i.tcs_in}}</span>
+            <span value="{{i.tcs_in}}">{{i.tcs_in}}</span>
           {%endfor%}
       </label>
-    </p>
+    </p>-->
+     {%for i in tcs_out %}
+        <p>
+          <input type="checkbox" id="{{i.key}}" />
+          <label for="{{i.key}}">{{i.key}}</label>
+        </p>
+        <!--<p>
+          <label>
+            <input type="checkbox" />
 
+                <span value="{{i.primary_dom}}">{{i.primary_dom}}</span>
 
-      <p>
-      <label>
-        <input type="checkbox" />
-          {%for i in tcs_out %}
-        <span value="{{i.tcs_out}}">{{i.tcs_out}}</span>
-          {%endfor%}
-      </label>
-    </p>
+          </label>
+        </p>-->
+     {%endfor%}
 </form>
+{%if error_tcs %}
+<div>
+    <H1>{{error_tcs}}</H1>
+</div>
+{% endif%}
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>-->
@@ -44,3 +53,5 @@
 
 </body>
 </html>
+
+
