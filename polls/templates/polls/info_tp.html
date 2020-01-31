@@ -1,8 +1,5 @@
-<html>
-<head>
-    {% extends 'polls/layout/base.html' %}
-</head>
-<body>
+
+{% extends 'polls/layout/base.html' %}
 
 {% block info_tp %}
 <form action="{% url 'polls:tp_filter' %}" method="post">
@@ -46,11 +43,7 @@
                 </div>
             </div>
         </div>
-
-
 </form>
 {% endblock %}
-</body>
-</html>
 
 
