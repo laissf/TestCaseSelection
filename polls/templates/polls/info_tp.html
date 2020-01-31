@@ -1,69 +1,55 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-        "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-    <title>TestPlan Filters</title>
-    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">-->
-    {% load static %}
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="{% static 'css/materialize.min.css'%}" media="screen,projection"/>
-
+    {% extends 'polls/layout/base.html' %}
 </head>
 <body>
 
-
+{% block info_tp %}
 <form action="{% url 'polls:tp_filter' %}" method="post">
     {% csrf_token %}
-    <div class="row" >
-        <div class="col s12 m6">
-            <div class="card" >
-                <div class="card-content">
-                    <div class="container" >
-                        <label for="id_tp"><b>ID Test Plan</b></label>
-                        <input type="text" id="id_tp" placeholder="ex: MCA-2144102 " name="id_tp" required>
-                        {%if error %}
-                        <div>
-                            <H1 >{{error}}</H1>
+        <div class="row" >
+            <div class="col s12">
+                <div class="card" >
+                    <div class="card-content">
+                        <div class="container" >
+                            <label for="id_tp"><b>ID Test Plan</b></label>
+                            <input type="text" id="id_tp" placeholder="ex: MCA-2144102 " name="id_tp" required>
+                            {%if error %}
+                            <div>
+                                <H1 >{{error}}</H1>
+                            </div>
+                            {% endif%}
                         </div>
-                        {% endif%}
-                    </div>
 
-                    <div class="container">
-                        <label for="reg_level"><b>Reglevel</b></label>
-                        <input type="text" id="reg_level" placeholder="ex: 1, 2" name="reg_level" required/>
-                        {%if erro_reg_level %}
-                        <div>
-                            <H1>{{erro_reg_level}}</H1>
+                        <div class="container">
+                            <label for="reg_level"><b>Reglevel</b></label>
+                            <input type="text" id="reg_level" placeholder="ex: 1, 2" name="reg_level" required/>
+                            {%if erro_reg_level %}
+                            <div>
+                                <H1>{{erro_reg_level}}</H1>
+                            </div>
+                            {% endif%}
                         </div>
-                        {% endif%}
-                    </div>
 
-                    <div class="container">
-                        <label for="url_spreadsheet"><b>Spreadsheet url</b></label>
-                        <input type="text" id="url_spreadsheet"placeholder="ex: http://https://docs.google.com/spreadsheets" name="url_spreadsheet" required>
-                        <button class="btn waves-effect waves-light" type="submit" name="action">Submit  </button>
+                        <div class="container">
+                            <label for="url_spreadsheet"><b>Spreadsheet url</b></label>
+                            <input type="text" id="url_spreadsheet"placeholder="ex: http://https://docs.google.com/spreadsheets" name="url_spreadsheet" required>
+                            <button class="btn waves-effect waves-light" type="submit" name="action">Submit  </button>
 
-                        {%if error %}
-                        <div>
-                            <H1>{{error}}</H1>
+                            {%if error %}
+                            <div>
+                                <H1>{{error}}</H1>
+                            </div>
+                            {% endif%}
                         </div>
-                        {% endif%}
                     </div>
                 </div>
             </div>
-
         </div>
-    </div>
+
+
 </form>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>-->
-<script type="text/javascript" src="{% static 'js/materialize.min.js'%}"></script>
-<script type="text/javascript">
-  $(document).ready(function(){
-    console.log("carregou");
-    $('select').material_select();
-  });
-</script>
+{% endblock %}
 </body>
 </html>
 

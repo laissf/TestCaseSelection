@@ -1,57 +1,37 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-        "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-    <title>TestPlan Filters</title>
-    {% load static %}
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="{% static 'css/materialize.min.css'%}" media="screen,projection"/>
-
+    {% extends 'polls/layout/base.html' %}
 </head>
 <body>
-<div class="container">
-    <div class="row">
-        <div class="col s12">
-            <div class="card-panel">
-
-                <form action="{% url 'polls:list_filter' %}" method="post">
-                    {% csrf_token %}
-
-                    <div class="input-field col s12">
-                        <select onchange="form.submit()" name="tp_filter" id="tp_filter">
-                            <option value="" disabled selected>Choose a test plan</option>
-                            {%for i in lista %}
-                            <option value="{{i.type}}"> {{i.type}}</option>
-                            {% endfor %}
-                        </select>
-                        <label for="tp_filter">Regression Test Plan</label>
-
+{% block tp_filter %}
+<form action="{% url 'polls:list_filter' %}" method="post">
+    {% csrf_token %}
+    <div class="container">
+        <div class="col s12 m6">
+            <div class="card" >
+                <div class="card-content">
+                    <div class="container" >
+                        <div class="input-field col s12">
+                            <select onchange="form.submit()" name="tp_filter" id="tp_filter">
+                                <option value="" disabled selected>Choose a test plan</option>
+                                {%for i in lista %}
+                                <option value="{{i.type}}">{{i.type}}</option>
+                                {% endfor %}
+                            </select>
+                            <label for="tp_filter">Regression Test Plan</label>
+                        </div>
                     </div>
-
-                </form>
-
+                </div>
             </div>
         </div>
     </div>
-</div>
+</form>
 {%if error_tp %}
 <div>
     <H1>{{error_tp}}</H1>
 </div>
 {% endif%}
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script type="text/javascript" src="{% static 'js/materialize.min.js'%}"></script>
-
-<script type="text/javascript">
-$(document).ready(function() {
-    console.log("Carregou");
-    $('select').material_select();
-  });
-
-
-
-</script>
-
+{% endblock %}
 </body>
 </html>
 

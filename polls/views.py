@@ -85,8 +85,8 @@ def tp_filter(request):
 
 
 def list_filter(request):
-    if request.POST and request.POST["tp_filter"]:  # nomenclatura no html
-        tp_filter = request.POST["tp_filter"]  # nomenclatura no html
+    if request.POST and request.POST["tp_filter"]:
+        tp_filter = request.POST["tp_filter"]
         try:
             query = QueryType.objects.get(type=tp_filter)
             filters = query.filters_set.all()
