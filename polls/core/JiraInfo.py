@@ -10,7 +10,7 @@ def access_jira(coreid, password, directory = 'https://dalek.mot.com/'):
 
 #geting all the tcs for a specific filter
 def filter_jira(jira,filter):
-    tcs_list = jira.search_issues(filter, maxResults=3000)
+    tcs_list = jira.search_issues(filter, maxResults=30)
     return tcs_list
 
 #geting TP id

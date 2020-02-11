@@ -2,8 +2,12 @@
 {% extends 'polls/layout/base.html' %}
 
 {% block tcs_list %}
+<input id="filters" value="{{filters}}" type="hidden">
+<input id="one" value="{{one}}" type="hidden">
 <form action="" method="post">
     {% csrf_token %}
+
+
     <!--<p>
       <label>
         <input type="checkbox" class="filled-in" checked="checked" />
@@ -12,11 +16,11 @@
           {%endfor%}
       </label>
     </p>-->
-    {%for i in tcs_out %}
-    <p>
-        <input type="checkbox" id="{{i.key}}" />
-        <label for="{{i.key}}">{{i.key}}</label>
-    </p>
+<!--    {%for i in tcs_out %}-->
+<!--    <p>-->
+<!--        <input type="checkbox" id="{{i.key}}" />-->
+<!--        <label for="{{i.key}}">{{i.key}}</label>-->
+<!--    </p>-->
     <!--<p>
       <label>
         <input type="checkbox" />
@@ -25,13 +29,29 @@
 
       </label>
     </p>-->
-    {%endfor%}
+<!--    {%endfor%}-->
 </form>
+<ul class="pagination">
+    <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+    <li class="active"><a href="#!">1</a></li>
+    <li class="waves-effect"><a href="#!">2</a></li>
+    <li class="waves-effect"><a href="#!">3</a></li>
+    <li class="waves-effect"><a href="#!">4</a></li>
+    <li class="waves-effect"><a href="#!">5</a></li>
+    <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+  </ul>
 {%if error_tcs %}
 <div>
     <H1>{{error_tcs}}</H1>
 </div>
 {% endif%}
 {% endblock %}
+  {% block js %}
+    {% load static %}
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
+    <script src="{%static 'js/script.js' %}"></script>
+{% endblock %}
+
+
 
 

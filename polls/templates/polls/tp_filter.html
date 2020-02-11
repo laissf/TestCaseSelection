@@ -13,12 +13,12 @@
                     <div class="container" >
                         <div class="input-field col s12">
                             <select onchange="form.submit()" name="tp_filter" id="tp_filter">
-                                <option value="" disabled selected>Choose a test plan</option>
+                                <option value="" disabled selected>Choose type of reg test plan</option>
                                 {%for i in lista %}
                                 <option value="{{i.type}}">{{i.type}}</option>
                                 {% endfor %}
                             </select>
-                            <label for="tp_filter">Regression Test Plan</label>
+                            <label for="tp_filter">Regression - Test Plans</label>
                         </div>
                     </div>
                 </div>

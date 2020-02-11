@@ -7,6 +7,8 @@ from .core.JiraInfo import access_jira, filter_jira, identific_tp, compare_featu
 from .core.Spreadsheet import open_sheet
 from django.core.cache import caches, cache
 from .core.DataBaseInfo import createBD
+from django.core.paginator import Paginator
+from django.http import JsonResponse
 
 
 #credentials jira storage in cache
@@ -16,10 +18,10 @@ def getjira():
 def login(request):
     #inicia o DataBaseInfo
     if len(QueryType.objects.all()) <1:
-        createBD()
+         createBD()
 
     if request.POST and request.POST["uname"]:
-        coreid =request.POST["uname"]
+        coreid=request.POST["uname"]
         password = request.POST["password"]
         try:
            access_jira(coreid, password)
@@ -91,7 +93,7 @@ def list_filter(request):
             query = QueryType.objects.get(type=tp_filter)
             filters = query.filters_set.all()
             label = tp_filter
-            if query.type == "Experiences" or query.type == "Data Migration":
+            if query.type == "Data Migration" or query.type == "Experiences":
                 ed = True
             else:
                 ed = False
@@ -102,34 +104,57 @@ def list_filter(request):
             return render(request, 'polls/list_filter.html', error_tp)
 
 
-def tcs_list(request):
+def ajax_tc_list(request):
+    filter = request.GET.get('filters', None)
+    type = request.GET.get('one', None)
+    type = "one_option" if type == "T" else "multi_options"
     jira = getjira()
     reg_level = cache.get('reg_level')
 
     try:
-        if "one_option" in request.POST:
-            filter = request.POST["one_option"]
+        if "one_option" in type:
             query = Filters.objects.get(plan=filter).query
             tcs = filter_jira(jira,query)
 
             tcs_in, tcs_out = compare_features(tcs, cache.get('url_spreadsheet'), reg_level)
             print(tcs_in, tcs_out, "1")
-            #return render(request, 'polls/tcs_list.html', {"tcs_in":tcs_in,"tcs_out":tcs_out,})
-            return render(request, 'polls/tcs_list.html', {"tcs_in": {}, "tcs_out": tcs_out[0:20], })
 
-        elif "multi_options" in request.POST:
+            #return render(request, 'polls/tcs_list.html', {"tcs_in":tcs_in,"tcs_out":tcs_out,})
+            # paginator = Paginator(tcs_out, 30)
+            # page = request.GET.get('page')
+            # tcs_out = paginator.get_page(page)
+            return JsonResponse({"work":False, "tcs_in":None, "tc_out":None})
+
+        elif "multi_options" in type:
             tcs_lista_enorme = []
-            filters = request.POST.getlist('multi_options')
+            filters = filter.split(",")
+            filters = filters[:len(filters)]
             for item in filters:
                 tcs = filter_jira(jira, item)
                 tcs_lista_enorme.extend(tcs)
 
             tcs_in, tcs_out = compare_features(tcs_lista_enorme, cache.get('url_spreadsheet'), reg_level)
             print(tcs_in, tcs_out, "2")
-            return render(request, 'polls/tcs_list.html', {{"tcs_in":tcs_in,"tcs_out":tcs_out,}})
+            return JsonResponse({"work":False, "tcs_in":None, "tc_out":None})
+
 
     except Exception as ex:
         print("Error: " + str(ex))
         error_tcs= {"error": "Something in Jira is not working well"}
-        return render(request, 'polls/tcs_list.html', error_tcs)
+        return JsonResponse({"work":False})
 
+
+
+def tcs_list(request):
+    f = ""
+
+    if "one_option" in request.POST:
+        filter = request.POST["one_option"]
+        f += filter
+        return render(request, 'polls/tcs_list.html', {"filters":f,"one":"T"})
+
+    elif "multi_options" in request.POST:
+        filters = request.POST.getlist('multi_options')
+        for item in filters:
+            f +=item+","
+        return render(request, 'polls/tcs_list.html', {"filters":f,"one":"F"})

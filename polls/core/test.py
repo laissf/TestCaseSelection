@@ -13,7 +13,7 @@ issues = jira.issue('MCA-2144102')
 tcs_tp = issues.fields.customfield_10200
 print(tcs_tp)
 reglevel = issues.fields.customfield_10104
-issues.update(summary="2")
+issues.update(summary="ola mundo")
 
 
 # #
