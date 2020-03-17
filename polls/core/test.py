@@ -3,6 +3,16 @@ import os
 import gspread
 from jira import JIRA
 import inspect
+from fuzzywuzzy import fuzz
+
+class TC(object):
+    def __init__(self,key,title, primary, secondary, label, reg):
+        self.key = key
+        self.title = title
+        self.customfield_10102 = secondary
+        self.label = label
+        self. customfield_10101 = primary
+        self.customfield_10104 = reg
 
 directory = 'https://dalek.mot.com/'
 #
@@ -10,21 +20,28 @@ directory = 'https://dalek.mot.com/'
 jira = JIRA(server=directory, auth=('laissf', 'Abre2503'))
 issues = jira.issue('MCA-2144102')
 # print(issues)
-tcs_tp = issues.fields.customfield_10200
-print(tcs_tp)
-reglevel = issues.fields.customfield_10104
-issues.update(summary="ola mundo")
+# tcs_tp = issues.fields.customfield_10200
+# print(tcs_tp)
+# reglevel = issues.fields.customfield_10104
+# label = issues.fields.labels
+# print (label)
+# def comp(s1, s2):
+#     if fuzz.partial_token_sort_ratio(s1, s2) > 80:
+#         return True
+#     else:
+#         return False
 
 
-# #
+# print(comp("make a call and send a sms", "make a call"))
 # pegar tcs a partir de um filtro e mostrar na  tela
 # for issue in jira.search_issues('project = 11010 AND issuetype = "Test Case" AND labels = TMO_Reg AND labels = Plat_Reg AND status != closed ORDER BY cf[10104] ASC', maxResults=3000):
 #     primary_dom = issue.fields.customfield_10101
- #   reglevel = issue.fields.customfield_10104
+#     # reglevel = issue.fields.customfield_10104
 #     secondary_dom = issue.fields.customfield_10102
 #     label = issue.fields.labels
 #     title = issue.fields.summary
-#     #print(str(secondary_dom))
+#
+#     print(comp("make a call and send a sms", "make a call"))
 
     # lista_teste = ['VZW_Reg', 'Voice Call', 'Carrier App']
     # # for cell in lista_teste:

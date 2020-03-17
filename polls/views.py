@@ -111,19 +111,29 @@ def ajax_tc_list(request):
     jira = getjira()
     reg_level = cache.get('reg_level')
 
+    json_tcin = []
+    json_tcout = []
+
     try:
         if "one_option" in type:
             query = Filters.objects.get(plan=filter).query
             tcs = filter_jira(jira,query)
 
             tcs_in, tcs_out = compare_features(tcs, cache.get('url_spreadsheet'), reg_level)
-            print(tcs_in, tcs_out, "1")
+            # print(tcs_in, tcs_out, "1")
+            for tc in tcs_in:
+                json_tcin.append({
+                    "key": tc["key"],
+                    "title": tc["title"],
 
-            #return render(request, 'polls/tcs_list.html', {"tcs_in":tcs_in,"tcs_out":tcs_out,})
-            # paginator = Paginator(tcs_out, 30)
-            # page = request.GET.get('page')
-            # tcs_out = paginator.get_page(page)
-            return JsonResponse({"work":False, "tcs_in":None, "tc_out":None})
+                })
+            for tc in tcs_out:
+                json_tcout.append({
+                    "key": tc["key"],
+                    "title": tc["title"],
+
+                })
+            return JsonResponse({"work":True, "tcs_in":json_tcin, "tc_out":json_tcout})
 
         elif "multi_options" in type:
             tcs_lista_enorme = []
@@ -134,16 +144,27 @@ def ajax_tc_list(request):
                 tcs_lista_enorme.extend(tcs)
 
             tcs_in, tcs_out = compare_features(tcs_lista_enorme, cache.get('url_spreadsheet'), reg_level)
-            print(tcs_in, tcs_out, "2")
-            return JsonResponse({"work":False, "tcs_in":None, "tc_out":None})
+            # print(tcs_in, tcs_out, "2")
+            for tc in tcs_in:
+                json_tcin.append({
+                    "key":tc ["key"],
+                    "title": tc["title"],
+
+                })
+            for tc in tcs_out:
+                json_tcout.append({
+                    "key": tc["key"],
+                    "title": tc["title"],
+
+                })
+
+            return JsonResponse({"work":True, "tcs_in":json_tcin, "tc_out":json_tcout})
 
 
     except Exception as ex:
         print("Error: " + str(ex))
         error_tcs= {"error": "Something in Jira is not working well"}
         return JsonResponse({"work":False})
-
-
 
 def tcs_list(request):
     f = ""
